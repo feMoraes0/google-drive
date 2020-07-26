@@ -1,44 +1,19 @@
 import React from 'react';
-import {View, SafeAreaView, TextInput, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import Header from '../components/Header';
-import SearchIcon from '../../assets/icons/search.svg';
+import SearchInput from '../components/SearchInput';
+import MainCard from '../components/MainCard';
 
 const Home = () => {
   return (
     <SafeAreaView>
       <Header />
-      <View style={styles.inputBox}>
-        <SearchIcon />
-        <TextInput
-          style={styles.textInput}
-          placeholder="Search Files"
-          placeholderTextColor="#7C809E"
-        />
-      </View>
+      <SearchInput />
+      <MainCard />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  inputBox: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    marginTop: 24,
-    marginHorizontal: 15,
-    borderRadius: 8,
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 15,
-  },
-  textInput: {
-    flex: 1,
-    marginLeft: 10,
-    paddingVertical: 15,
-    fontFamily: 'Poppins',
-    fontSize: 16,
-    lineHeight: 19,
-    letterSpacing: -0.24,
-  },
-});
+const styles = StyleSheet.create({});
 
 export default Home;
