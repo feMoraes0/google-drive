@@ -12,6 +12,7 @@ const FloatingActionButton = ({children}) => {
 const styles = StyleSheet.create({
   floatingActionButton: {
     backgroundColor: '#4378DB',
+    zIndex: 2,
     width: 64,
     height: 64,
     shadowColor: '#4378DB',
