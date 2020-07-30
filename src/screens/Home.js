@@ -26,6 +26,8 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    minHeight: '100%',
+    backgroundColor: '#F2F5F8',
   },
 });
 

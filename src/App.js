@@ -1,21 +1,9 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
 import Home from './screens/Home';
+import Menu from './screens/Menu';
 
 const App = () => {
-  return (
-    <View style={styles.body}>
-      <Home />
-    </View>
-  );
+  return <Menu />;
 };
-
-const styles = StyleSheet.create({
-  body: {
-    width: '100%',
-    minHeight: '100%',
-    backgroundColor: '#F2F5F8',
-  },
-});
 
 export default App;
