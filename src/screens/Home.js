@@ -7,9 +7,9 @@ import FloatingActionButton from '../components/FloatingActionButton';
 import Add from '../../assets/icons/add.svg';
 import Folders from '../components/Folders';
 
-const Home = ({showMenu, border}) => {
+const Home = ({showMenu, radius}) => {
   return (
-    <Animated.View style={[styles.container, {borderRadius: border}]}>
+    <Animated.View style={[styles.container, {borderRadius: radius}]}>
       <FloatingActionButton>
         <Add />
       </FloatingActionButton>

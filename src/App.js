@@ -71,7 +71,7 @@ const App = () => {
         ]}>
         <Home
           showMenu={showMenu}
-          border={controlPositionX.interpolate({
+          radius={controlPositionX.interpolate({
             inputRange: [0, 260],
             outputRange: [0, 20],
             extrapolate: 'clamp',
