@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {Animated, StyleSheet} from 'react-native';
 import Header from '../components/Header';
 import SearchInput from '../components/SearchInput';
 import MainCard from '../components/MainCard';
@@ -7,9 +7,9 @@ import FloatingActionButton from '../components/FloatingActionButton';
 import Add from '../../assets/icons/add.svg';
 import Folders from '../components/Folders';
 
-const Home = ({showMenu}) => {
+const Home = ({showMenu, border}) => {
   return (
-    <View style={styles.container}>
+    <Animated.View style={[styles.container, {borderRadius: border}]}>
       <FloatingActionButton>
         <Add />
       </FloatingActionButton>
@@ -17,7 +17,7 @@ const Home = ({showMenu}) => {
       <SearchInput />
       <MainCard />
       <Folders />
-    </View>
+    </Animated.View>
   );
 };
 

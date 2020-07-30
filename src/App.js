@@ -4,6 +4,7 @@ import Home from './screens/Home';
 import Menu from './screens/Menu';
 
 const App = () => {
+  const animationDuration = 500;
   const controlPositionY = new Animated.Value(0);
   const controlPositionX = new Animated.Value(0);
   const controlRotation = new Animated.Value(0);
@@ -11,18 +12,18 @@ const App = () => {
   const showMenu = () => {
     Animated.parallel([
       Animated.timing(controlPositionY, {
-        toValue: 150,
-        duration: 500,
+        toValue: 130,
+        duration: animationDuration,
         useNativeDriver: true,
       }),
       Animated.timing(controlPositionX, {
         toValue: 260,
-        duration: 500,
+        duration: animationDuration,
         useNativeDriver: true,
       }),
       Animated.timing(controlRotation, {
-        toValue: -0.25,
-        duration: 500,
+        toValue: -0.23,
+        duration: animationDuration,
         useNativeDriver: true,
       }),
     ]).start();
@@ -32,17 +33,17 @@ const App = () => {
     Animated.parallel([
       Animated.timing(controlPositionY, {
         toValue: 0,
-        duration: 500,
+        duration: animationDuration,
         useNativeDriver: true,
       }),
       Animated.timing(controlPositionX, {
         toValue: 0,
-        duration: 500,
+        duration: animationDuration,
         useNativeDriver: true,
       }),
       Animated.timing(controlRotation, {
         toValue: 0,
-        duration: 500,
+        duration: animationDuration,
         useNativeDriver: true,
       }),
     ]).start();
@@ -68,7 +69,14 @@ const App = () => {
             ],
           },
         ]}>
-        <Home showMenu={showMenu} />
+        <Home
+          showMenu={showMenu}
+          border={controlPositionX.interpolate({
+            inputRange: [0, 260],
+            outputRange: [0, 20],
+            extrapolate: 'clamp',
+          })}
+        />
       </Animated.View>
     </>
   );
@@ -79,7 +87,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: '100%',
     height: '100%',
-    backgroundColor: '#FF0000',
+    borderRadius: 20,
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
