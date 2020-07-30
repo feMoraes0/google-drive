@@ -6,6 +6,7 @@ import FolderCard from './FolderCard';
 const Folders = () => {
   const folders = [
     {
+      id: 1,
       title: 'Web Design',
       date: '20 Dec 2020',
       titleColor: '#405DB5',
@@ -14,6 +15,7 @@ const Folders = () => {
       folderColor: 'blue',
     },
     {
+      id: 2,
       title: 'App Design',
       date: '21 Dec 2020',
       titleColor: '#F0A714',
@@ -22,6 +24,7 @@ const Folders = () => {
       folderColor: 'yellow',
     },
     {
+      id: 3,
       title: 'Font Collections',
       date: '22 Dec 2020',
       titleColor: '#AB3F3F',
@@ -30,6 +33,7 @@ const Folders = () => {
       folderColor: 'red',
     },
     {
+      id: 4,
       title: 'Illustrations',
       date: '23 Dec 2020',
       titleColor: '#228955',
@@ -38,6 +42,7 @@ const Folders = () => {
       folderColor: 'green',
     },
     {
+      id: 5,
       title: 'Pattern',
       date: '24 Dec 2020',
       titleColor: '#405DB5',
@@ -46,6 +51,7 @@ const Folders = () => {
       folderColor: 'blue',
     },
     {
+      id: 6,
       title: 'My Portfolio',
       date: '24 Dec 2020',
       titleColor: '#F0A714',
@@ -65,6 +71,7 @@ const Folders = () => {
         {folders.map((item) => {
           return (
             <FolderCard
+              key={item.id}
               title={item.title}
               subtitle={item.date}
               backgroundColor={item.backgroundColor}
