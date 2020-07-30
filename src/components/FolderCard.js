@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import FolderBlue from '../../assets/images/folder-blue.png';
 import FolderGreen from '../../assets/images/folder-green.png';
 import FolderYellow from '../../assets/images/folder-yellow.png';
@@ -27,7 +27,7 @@ const FolderCard = ({
   };
 
   return (
-    <View style={styles.folderCard}>
+    <TouchableOpacity style={styles.folderCard}>
       <View style={[styles.folderCardBody, {backgroundColor: backgroundColor}]}>
         <View style={styles.icons}>
           <Image source={getFolderByColor(folderColor)} />
@@ -40,7 +40,7 @@ const FolderCard = ({
           {subtitle}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

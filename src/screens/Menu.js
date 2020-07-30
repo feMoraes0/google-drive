@@ -25,7 +25,7 @@ const Menu = ({hideMenu}) => {
             <View style={styles.circleUser} />
             <View style={styles.headerTexts}>
               <Text style={styles.headerTextSecondary}>Hey</Text>
-              <Text style={styles.headerTextMain}>Stefany</Text>
+              <Text style={styles.headerTextMain}>Your Name Here</Text>
             </View>
           </View>
           <TouchableOpacity onPress={() => hideMenu()}>
@@ -64,7 +64,7 @@ const Menu = ({hideMenu}) => {
         </View>
         <View style={[styles.menuOption, styles.logout]}>
           <Logout />
-          <Text style={styles.menuOptionText}>Help & feedback</Text>
+          <Text style={styles.menuOptionText}>Log out</Text>
         </View>
       </SafeAreaView>
     </View>
