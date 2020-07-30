@@ -16,7 +16,7 @@ import Settings from '../../assets/icons/menu/settings.svg';
 import Help from '../../assets/icons/menu/help.svg';
 import Logout from '../../assets/icons/menu/logout.svg';
 
-const Menu = () => {
+const Menu = ({hideMenu}) => {
   return (
     <View style={styles.container}>
       <SafeAreaView style={styles.container}>
@@ -28,7 +28,7 @@ const Menu = () => {
               <Text style={styles.headerTextMain}>Stefany</Text>
             </View>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => hideMenu()}>
             <Close />
           </TouchableOpacity>
         </View>

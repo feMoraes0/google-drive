@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import Header from '../components/Header';
 import SearchInput from '../components/SearchInput';
 import MainCard from '../components/MainCard';
@@ -7,27 +7,26 @@ import FloatingActionButton from '../components/FloatingActionButton';
 import Add from '../../assets/icons/add.svg';
 import Folders from '../components/Folders';
 
-const Home = () => {
+const Home = ({showMenu}) => {
   return (
-    <>
-      <SafeAreaView style={styles.container}>
-        <FloatingActionButton>
-          <Add />
-        </FloatingActionButton>
-        <Header />
-        <SearchInput />
-        <MainCard />
-      </SafeAreaView>
+    <View style={styles.container}>
+      <FloatingActionButton>
+        <Add />
+      </FloatingActionButton>
+      <Header showMenu={showMenu} />
+      <SearchInput />
+      <MainCard />
       <Folders />
-    </>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    minHeight: '100%',
+    height: '100%',
     backgroundColor: '#F2F5F8',
+    paddingTop: 50,
   },
 });
 

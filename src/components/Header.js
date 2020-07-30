@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import MenuIcon from '../../assets/icons/menu.svg';
 
-const Header = () => {
+const Header = ({showMenu}) => {
   return (
     <View style={styles.header}>
-      <MenuIcon />
+      <TouchableOpacity onPress={() => showMenu()}>
+        <MenuIcon />
+      </TouchableOpacity>
       <Text style={styles.headerText}>My Drive</Text>
       <View style={styles.userCircle} />
     </View>
