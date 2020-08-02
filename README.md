@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="100" src="https://raw.githubusercontent.com/feMoraes0/project-prints/master/google-drive/logo-google-drive.png">
+</p>
+
 <h1 align="center">Google Drive Redesign</h1>
 
 <p align="center">
@@ -8,6 +12,7 @@
 ## :rocket: Knowledges
  - `React Native`
  - `Custom Fonts`
+ - `Animation` 
  - `SVG`
 
 ## :paperclip: Useful Links
