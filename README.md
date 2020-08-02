@@ -1,8 +1,9 @@
 <h1 align="center">Google Drive Redesign</h1>
 
-<!-- <p align="center">
-  <img width="250" src="URL">
-</p> -->
+<p align="center">
+  <img width="250" src="https://raw.githubusercontent.com/feMoraes0/project-prints/master/google-drive/print-001.png">
+  <img width="250" src="https://raw.githubusercontent.com/feMoraes0/project-prints/master/google-drive/print-002.png">
+</p>
 
 ## :rocket: Knowledges
  - `React Native`
@@ -27,9 +28,10 @@ $ cd google-drive
 # Install dependencies
 $ npm install
 
-# Run the app
+# Run the iOS app
 $ react-native run-ios
-# or
+
+# Run the Android app
 $ react-native run-android
 ```
 
